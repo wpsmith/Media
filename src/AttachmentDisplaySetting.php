@@ -10,21 +10,21 @@
  *
  * @package    WPS\Media
  * @author     Travis Smith <t@wpsmith.net>
- * @copyright  2015-2018 Travis Smith
+ * @copyright  2015-2019 Travis Smith
  * @license    http://opensource.org/licenses/gpl-2.0.php GNU Public License v2
  * @link       https://github.com/wpsmith/WPS
  * @version    1.0.0
  * @since      0.1.0
  */
 
-namespace WPS\Media;
+namespace WPS\WP\Media;
 
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! class_exists( 'WPS\Media\AttachmentDisplaySetting' ) ) {
+if ( ! class_exists( __NAMESPACE__ . '\AttachmentDisplaySetting' ) ) {
 	/**
 	 * Class AttachmentDisplaySetting
      *
@@ -77,7 +77,7 @@ if ( ! class_exists( 'WPS\Media\AttachmentDisplaySetting' ) ) {
 		public function media_template() {
 			?>
             <script type="text/html" id="tmpl-attachment-display-settings_twc">
-                <h2><?php _e( 'Attachment Display Settings', WPS_TEXT_DOMAIN ); ?></h2>
+                <h2><?php _e( 'Attachment Display Settings', 'wps' ); ?></h2>
 
                 <# if ( 'image' === data.type ) { #>
                 <label class="setting">
